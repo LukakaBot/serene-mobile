@@ -41,4 +41,7 @@ export default defineConfig({
   transformers: [
     ...transformers,
   ],
+  shortcuts: {
+    'bottom-tag-title': 'inline-block relative text-xl font-bold z-0 after:content-[""] after:absolute after:bottom-0 after:left-0 after:h-2 after:w-full after:bg-[var(--primary-color)] after:-z-1',
+  }
 })
