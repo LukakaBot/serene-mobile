@@ -15,12 +15,22 @@
       }
     },
     {
+      "path": "pages/category/index",
+      "type": "page",
+      "style": {}
+    },
+    {
       "path": "pages/logs/index",
       "type": "logs",
       "style": {
         "navigationBarTitleText": "日志"
       },
       "layout": false
+    },
+    {
+      "path": "pages/mine/index",
+      "type": "page",
+      "style": {}
     }
   ],
   "subPackages": []

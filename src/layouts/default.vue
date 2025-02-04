@@ -20,7 +20,7 @@ const tabbar = ref(0);
 
 const tabs = ref([
   { index: 0, title: "首页", icon: "home", route: "home" },
-  { index: 1, title: "分类", icon: "cart", route: "category" },
+  { index: 1, title: "分类", icon: "app", route: "category" },
   { index: 2, title: "我的", icon: "user", route: "mine" },
 ]);
 
