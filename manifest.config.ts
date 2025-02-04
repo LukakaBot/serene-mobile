@@ -1,4 +1,6 @@
-{
+import { defineManifestConfig } from '@uni-helper/vite-plugin-uni-manifest';
+
+export default defineManifestConfig({
   "name": "serene-mobile",
   "appid": "",
   "description": "",
@@ -45,4 +47,4 @@
     "enable": false
   },
   "vueVersion": "3"
-}
+})

@@ -1,8 +1,10 @@
 import { defineConfig } from "vite";
-import uni from "@dcloudio/vite-plugin-uni";
-import Components from '@uni-helper/vite-plugin-uni-components';
 import UniManifest from '@uni-helper/vite-plugin-uni-manifest';
 import UniPages from '@uni-helper/vite-plugin-uni-pages';
+import UniLayouts from '@uni-helper/vite-plugin-uni-layouts';
+import uni from "@dcloudio/vite-plugin-uni";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import Components from '@uni-helper/vite-plugin-uni-components';
 import AutoImport from 'unplugin-auto-import/vite';
 import uniPolyfill from 'vite-plugin-uni-polyfill';
 
@@ -12,13 +14,15 @@ export default defineConfig(async () => {
 
   return {
     plugins: [
-      uni(),
-      UnoCSS(),
-      Components(),
       UniManifest(),
+      UniLayouts(),
       UniPages({
         dts: 'src/typings/uni-pages.d.ts',
       }),
+      uni(),
+      vueJsx(),
+      UnoCSS(),
+      Components(),
       AutoImport({
         imports: ['vue', 'uni-app'],
         dts: 'src/typings/auto-imports.d.ts',
