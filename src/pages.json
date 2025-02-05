@@ -16,7 +16,7 @@
     },
     {
       "path": "pages/category/index",
-      "type": "page",
+      "type": "category",
       "style": {}
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "path": "pages/mine/index",
-      "type": "page",
+      "type": "mine",
       "style": {}
     }
   ],
