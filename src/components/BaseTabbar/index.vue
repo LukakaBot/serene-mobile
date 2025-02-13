@@ -1,7 +1,7 @@
 <template>
 	<wd-tabbar v-model="tabbar" @change="handleChangeTabbar">
 		<wd-tabbar-item
-			v-model="currentPage"
+			v-model="tabbar"
 			:title="tab.title"
 			:icon="tab.icon"
 			v-for="tab in tabs"
@@ -12,6 +12,8 @@
 </template>
 
 <script setup lang="ts">
+const router = useRouter();
+
 const currentPage = ref('home');
 
 const tabbar = ref(0);
@@ -23,9 +25,11 @@ const tabs = ref([
 ]);
 
 function handleChangeTabbar({ value }: { value: number }) {
-	console.log(currentPage.value);
-	console.log(value);
-	console.log(tabs.value[value].route);
+	console.log('value: ' + value);
+	console.log('tabbar: ' + tabbar.value);
+	console.log('currentPage: ' + currentPage.value);
+	console.log('tabs: ' + tabs.value[value].route);
+	router.push(`/pages/${tabs.value[value].route}/index`);
 }
 </script>
 
