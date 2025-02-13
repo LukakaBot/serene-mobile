@@ -1,22 +1,18 @@
-<route lang="json">
-{ "layout": "default" }
-</route>
-
 <template>
-  <div class="content-box flex flex-col justify-center items-center">
-    <image class="logo" src="/static/logo.png" />
-    <h1 class="text-center">Serene Mobile</h1>
-  </div>
+	<div class="content-box flex flex-col justify-center items-center">
+		<image class="logo" src="/static/logo.png" />
+		<h1 class="text-center">Serene Mobile</h1>
+	</div>
 </template>
 
 <script setup lang="ts"></script>
 
 <style scoped>
 .logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
+	height: 200rpx;
+	width: 200rpx;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50rpx;
 }
 </style>

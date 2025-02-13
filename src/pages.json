@@ -9,15 +9,16 @@
     {
       "path": "pages/home/index",
       "type": "home",
-      "layout": "default",
       "style": {
         "navigationBarTitleText": "首页"
-      }
+      },
+      "name": "home"
     },
     {
       "path": "pages/category/index",
       "type": "category",
-      "style": {}
+      "style": {},
+      "name": "category"
     },
     {
       "path": "pages/logs/index",
@@ -25,12 +26,14 @@
       "style": {
         "navigationBarTitleText": "日志"
       },
+      "name": "logs",
       "layout": false
     },
     {
       "path": "pages/mine/index",
       "type": "mine",
-      "style": {}
+      "style": {},
+      "name": "mine"
     }
   ],
   "subPackages": []

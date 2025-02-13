@@ -22,12 +22,21 @@ export default defineConfig(async () => {
       uni(),
       vueJsx(),
       UnoCSS(),
-      Components(),
+      Components({
+        dts: 'src/typings/components.d.ts',
+      }),
       AutoImport({
-        imports: ['vue', 'uni-app'],
+        imports: [
+          'vue',
+          'uni-app',
+          {
+            from: 'uni-mini-router',
+            imports: ['createRouter', 'useRouter', 'useRoute']
+          }
+        ],
         dts: 'src/typings/auto-imports.d.ts',
-        dirs: ['src/composables', 'src/stores', 'src/utils'],
-        vueTemplate: true,
+        // dirs: ['src/composables', 'src/stores', 'src/utils'],
+        // vueTemplate: true,
       }),
       uniPolyfill(),
     ],
