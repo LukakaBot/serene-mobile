@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import UniManifest from '@uni-helper/vite-plugin-uni-manifest';
 import UniPages from '@uni-helper/vite-plugin-uni-pages';
 import UniLayouts from '@uni-helper/vite-plugin-uni-layouts';
@@ -9,10 +9,12 @@ import AutoImport from 'unplugin-auto-import/vite';
 import uniPolyfill from 'vite-plugin-uni-polyfill';
 
 // https://vitejs.dev/config/
-export default defineConfig(async () => {
+export default defineConfig(async ({ mode }) => {
   const UnoCSS = (await import('unocss/vite')).default
+  const env = loadEnv(mode, process.cwd());
 
   return {
+    base: env.VITE_APP_PUBLIC_PATH,
     plugins: [
       UniManifest(),
       UniLayouts(),
