@@ -1,13 +1,18 @@
 import { defineStore } from 'pinia';
 import type { TabbarState } from './types';
 
-export const useTabbarStore = defineStore({
-  id: 'tabbar-store',
+export const useTabbarStore = defineStore('tabbar', {
+  persist: true,
   state: (): TabbarState => ({
     tabbarIndex: 0,
     tabbarName: '首页',
   }),
   actions: {
-
-  }
-})
+    setTabbarIndex(index: number) {
+      this.tabbarIndex = index;
+    },
+    setTabbarName(name: string) {
+      this.tabbarName = name;
+    },
+  },
+});

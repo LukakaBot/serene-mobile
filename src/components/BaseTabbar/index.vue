@@ -12,6 +12,10 @@
 </template>
 
 <script setup lang="ts">
+// import { useTabbarStore } from '@/store/modules/tabbar';
+
+// const tabbarStore = useTabbarStore();
+
 const router = useRouter();
 
 const currentPage = ref('home');
