@@ -6,6 +6,7 @@ export const useTabbarStore = defineStore('tabbar', {
   state: (): TabbarState => ({
     tabbarIndex: 0,
     tabbarName: '首页',
+    tabbarPath: '/pages/home/index'
   }),
   actions: {
     setTabbarIndex(index: number) {
@@ -14,5 +15,8 @@ export const useTabbarStore = defineStore('tabbar', {
     setTabbarName(name: string) {
       this.tabbarName = name;
     },
+    setTabbarPath(path: string) {
+      this.tabbarPath = path;
+    }
   },
 });

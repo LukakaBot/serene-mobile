@@ -27,9 +27,12 @@ const tabs = ref([
 ]);
 
 function handleChangeTabbar({ value }: { value: number }) {
+	const tab = tabs.value[value];
+	const fullPath = `/pages/${tab.route}/index`;
 	tabbarStore.setTabbarIndex(value);
-	tabbarStore.setTabbarName(tabs.value[value].title);
-	router.push(`/pages/${tabs.value[value].route}/index`);
+	tabbarStore.setTabbarName(tab.title);
+	tabbarStore.setTabbarPath(fullPath);
+	router.replace(fullPath);
 }
 </script>
 
