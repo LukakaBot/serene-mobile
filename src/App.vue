@@ -12,7 +12,7 @@ onHide(() => {
 </script>
 
 <style>
-uni-page-body {
+page {
   height: 100%;
 }
 </style>

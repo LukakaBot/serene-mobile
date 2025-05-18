@@ -13,7 +13,8 @@
       "dom"
     ],
     "types": [
-      "@dcloudio/types"
+      "@dcloudio/types",
+      "wot-design-uni/global",
     ]
   },
   "include": [

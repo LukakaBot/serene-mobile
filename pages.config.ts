@@ -12,6 +12,7 @@ export default defineUniPages({
 			path: 'pages/home/index',
 			name: 'home',
 			type: 'home',
+			layout: 'page',
 			style: {
 				navigationBarTitleText: '首页',
 			},
@@ -20,22 +21,24 @@ export default defineUniPages({
 			path: 'pages/category/index',
 			name: 'category',
 			type: 'category',
+			layout: 'page',
 			style: {},
 		},
 		{
 			path: 'pages/mine/index',
 			name: 'mine',
 			type: 'mine',
+			layout: 'page',
 			style: {},
 		},
 		{
 			path: 'pages/logs/index',
 			name: 'logs',
 			type: 'logs',
+			layout: false,
 			style: {
 				navigationBarTitleText: '日志',
 			},
-			layout: false,
 		},
 	],
 	subPackages: [],
