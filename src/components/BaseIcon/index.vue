@@ -1,9 +1,17 @@
 <template>
   <div :style="iconStyle">
     <image :src="iconName" :style="iconStyle" v-if="isLocalIcon" />
-    <div :class="[iconName]" :style="iconStyle" v-else></div>
+    <span :class="iconName" :style="iconStyle" v-else></span>
   </div>
 </template>
+
+<script lang="ts">
+export default {
+  options: {
+    virtualHost: true,
+  },
+};
+</script>
 
 <script setup lang="ts">
 import type { CSSProperties } from "vue";
@@ -18,11 +26,11 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  color: "transparent",
+  color: "currentColor",
   size: 48,
 });
 
-const isLocalIcon = computed(() => props.name?.startsWith("icon-"));
+const isLocalIcon = computed(() => !!props.name?.startsWith("icon-"));
 
 const iconName = computed(() => {
   return isLocalIcon.value ? `/static/svg/${props.name}.svg` : props.name;
@@ -36,6 +44,7 @@ const iconStyle = computed<CSSProperties>(() => {
     width: iconSizeWithUnit.value,
     height: iconSizeWithUnit.value,
     color: props.color,
+    verticalAlign: "middle",
   };
 });
 </script>

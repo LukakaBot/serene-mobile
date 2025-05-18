@@ -25,7 +25,7 @@ const transformers: SourceCodeTransformer[] = [transformerDirectives(), transfor
 if (isApplet) {
   presets.push(presetApplet());
   presets.push(presetRemRpx());
-  transformers.push(transformerAttributify({ ignoreAttributes: ['block'] }));
+  transformers.push(transformerAttributify({ ignoreAttributes: ['block', 'name', 'size'] }));
 }
 else {
   presets.push(presetApplet());

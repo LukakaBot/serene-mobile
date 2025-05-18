@@ -33,6 +33,7 @@ export default defineManifestConfig({
 			urlCheck: false,
 		},
 		usingComponents: true,
+		mergeVirtualHostAttributes: true,
 	},
 	'mp-alipay': {
 		usingComponents: true,
