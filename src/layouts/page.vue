@@ -8,8 +8,6 @@
 </template>
 
 <script setup lang="ts">
-import BaseTabbar from "@/components/BaseTabbar/index.vue";
-
 const tabList = [
   {
     index: 0,

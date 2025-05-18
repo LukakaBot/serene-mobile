@@ -1,6 +1,6 @@
 <template>
 	<div class="page-wrapper flex flex-col justify-center items-center">
-		<image class="logo" src="/static/logo.png" />
+		<image class="logo" src="/static/images/logo.png" />
 		<h1 class="text-center">Serene Mobile</h1>
 	</div>
 </template>
