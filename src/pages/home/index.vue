@@ -1,5 +1,5 @@
 <template>
-	<div class="content-box flex flex-col justify-center items-center">
+	<div class="page-wrapper flex flex-col justify-center items-center">
 		<image class="logo" src="/static/logo.png" />
 		<h1 class="text-center">Serene Mobile</h1>
 	</div>

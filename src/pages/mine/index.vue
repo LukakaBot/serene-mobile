@@ -1,5 +1,5 @@
 <template>
-	<div class="content-box">
+	<div class="page-wrapper">
 		mine page
 		<BaseIcon name="i-mdi:ab-testing" />
 		<BaseIcon name="i-logos-vue" />

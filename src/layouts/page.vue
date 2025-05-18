@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-full" :style="pageStyle">
+  <div class="flex flex-col h-full box-border" :style="pageStyle">
     <!-- <div class="flex-1"> -->
     <slot>main</slot>
     <BaseTabbar :list="tabList" />
@@ -22,7 +22,7 @@ const tabList = [
     index: 1,
     title: "分类",
     path: "/pages/category/index",
-    icon: "category",
+    icon: "app",
     route: "category",
   },
   {

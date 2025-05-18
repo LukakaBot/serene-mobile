@@ -1,8 +1,8 @@
 <template>
   <wd-tabbar
-    :model-value="tabbarStore.tabbarIndex"
-    fixed
-    safeAreaInsetBottom
+    :model-value="tabbarStore.tabbarPath"
+    :fixed="true"
+    :safeAreaInsetBottom="true"
     @change="handleChangeTabbar"
   >
     <wd-tabbar-item

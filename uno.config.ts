@@ -43,6 +43,6 @@ export default defineConfig({
   ],
   shortcuts: {
     'bottom-tag-title': 'inline-block relative text-xl font-bold z-0 after:content-[""] after:absolute after:bottom-0 after:left-0 after:h-2 after:w-full after:bg-[var(--primary-color)] after:-z-1',
-    'content-box': 'h-full',
+    'page-wrapper': 'flex-1 h-full',
   }
 })
