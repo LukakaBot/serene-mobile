@@ -16,6 +16,9 @@ export default defineConfig(async ({ mode }) => {
   return {
     base: env.VITE_APP_PUBLIC_PATH,
     plugins: [
+      Components({
+        dts: 'src/typings/components.d.ts',
+      }),
       UniManifest(),
       UniLayouts(),
       UniPages({
@@ -24,9 +27,6 @@ export default defineConfig(async ({ mode }) => {
       uni(),
       vueJsx(),
       UnoCSS(),
-      Components({
-        dts: 'src/typings/components.d.ts',
-      }),
       AutoImport({
         imports: [
           'vue',
