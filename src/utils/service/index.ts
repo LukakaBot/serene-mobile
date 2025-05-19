@@ -4,8 +4,12 @@ import type { ServiceResponse } from './types';
 
 const { VITE_SERVICE_URL, VITE_SERVICE_PORT, VITE_SERVICE_PREFIX } = import.meta.env;
 
+const SERVICE_PORT = `${VITE_SERVICE_PORT ? `:${VITE_SERVICE_PORT}` : ""}`;
+
+const BASE_URL = `${VITE_SERVICE_URL}${SERVICE_PORT}${VITE_SERVICE_PREFIX}`;
+
 const service = new Request({
-  baseURL: `${VITE_SERVICE_URL}:${VITE_SERVICE_PORT}${VITE_SERVICE_PREFIX}`,
+  baseURL: BASE_URL,
   timeout: 8 * 1000,
 });
 
@@ -21,7 +25,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (response: HttpResponse<ServiceResponse>): any => {
     const res = response.data;
-    if (res.code !== 0) {
+    if (res.code !== 200) {
       return Promise.reject(res);
     }
     return res.data;
