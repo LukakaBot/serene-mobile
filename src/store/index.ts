@@ -6,8 +6,8 @@ import { useTabbarStore } from './modules/tabbar';
 export const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 
-export function setupPinia(app: App) {
+function setupPinia(app: App) {
 	app.use(pinia);
 }
 
-export { useTabbarStore };
+export { setupPinia, useTabbarStore };
